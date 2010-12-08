@@ -14,3 +14,4 @@ nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 vmap r "_dP
 :cmap W w
 :set number
+map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
