@@ -12,6 +12,7 @@ nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
 nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 vmap r "_dP
-:cmap W w
+c>:1,$!xmllint --format -<CR>YEScmap W w
 :set number
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+map <F2> <Esc>:1,$!xmllint --format -<CR>
