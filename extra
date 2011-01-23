@@ -13,5 +13,9 @@ nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 vmap r "_dP
 :cmap W w
+:nmap <S-l> :s/$/)/<CR>
+:nmap <C-l> :s/.$//<CR>
 :set number
-map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+map <buffer> <S-e> :w<CR>:!/usr/bin/env python2 % <CR>
+nnoremap + maO<esc>`a
+nnoremap _ mao<esc>`a
