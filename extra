@@ -4,6 +4,9 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 
+filetype plugin indent on
+let g:syntastic_enable_signs=1
+
 set t_Co=256
 :syntax on
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
