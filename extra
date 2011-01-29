@@ -51,4 +51,6 @@ nnoremap <leader>p :bp<CR>
 " netrw stuff:
 let g:netrw_browse_split=4
 let g:netrw_preview=1
+nnoremap <leader>. :Ve.<CR>
+nnoremap <leader>> :Se.<CR>
 
