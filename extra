@@ -58,3 +58,7 @@ set statusline+=%<%P                         " file position
 " buffer quickview
 nnoremap <leader>t :BufExplorer<CR>
 
+" netrw stuff:
+nnoremap <leader>. :Ve.<CR>
+nnoremap <leader>> :Se.<CR>
+
