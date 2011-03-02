@@ -29,7 +29,6 @@ inoremap jj <ESC>
 :cmap Q q 
 :nnoremap <C-q> :q<CR>
 :set number
-map <buffer> <S-e> :w<CR>:!/usr/bin/env python2 % <CR>
 nnoremap + maO<esc>`a
 nnoremap _ mao<esc>`a
 map <F2> <Esc>:1,$!xmllint --format -<CR>
