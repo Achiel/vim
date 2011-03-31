@@ -1,7 +1,7 @@
 :colorscheme zenburn
 set softtabstop=2
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set ignorecase
 set smartcase
@@ -19,8 +19,6 @@ set t_Co=256
 :syntax on
 
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
-nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
 nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
@@ -28,8 +26,8 @@ let mapleader = ","
 vmap r "_dP
 inoremap jj <ESC>
 :cmap W w
-:nmap <leader>L :s/$/)/<CR>
-:nmap <leader>l :s/.$//<CR>
+:cmap Q q 
+:nnoremap <C-q> :q<CR>
 :set number
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python2 % <CR>
 nnoremap + maO<esc>`a
@@ -48,9 +46,23 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>p :bp<CR>
 
+" statusline:
+set statusline=
+set statusline+=%-3.3n\                      " buffer number
+set statusline+=%F\                          " filename
+set statusline+=%h%m%r%w                     " status flags
+set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
+set statusline+=%=                           " right align remainder
+set statusline+=0x%-8B                       " character value
+set statusline+=%-14(%l,%c%V%)               " line, character
+set statusline+=%<%P                         " file position
+
+" buffer quickview
+nnoremap <leader>t :BufExplorer<CR>
+
 " netrw stuff:
-let g:netrw_browse_split=4
-let g:netrw_preview=1
-nnoremap <leader>. :Ve.<CR>
+nnoremap <leader>. :Ve .<CR><CR>
 nnoremap <leader>> :Se.<CR>
 
+" gundo:
+nnoremap <leader>g :GundoToggle<CR>
