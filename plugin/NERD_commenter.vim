@@ -208,7 +208,7 @@ let s:delimiterMap = {
     \ 'ldif': { 'left': '#' },
     \ 'lilo': { 'left': '#' },
     \ 'lilypond': { 'left': '%' },
-    \ 'liquid': { 'left': '{% comment %}', 'right': '{% endcomment %}' },
+    \ 'liquid': { 'left': '{%', 'right': '%}' },
     \ 'lisp': { 'left': ';', 'leftAlt': '#|', 'rightAlt': '|#' },
     \ 'llvm': { 'left': ';' },
     \ 'lotos': { 'left': '(*', 'right': '*)' },
@@ -2731,7 +2731,7 @@ endfunction
 
 if g:NERDCreateDefaultMappings
     call s:CreateMaps('<plug>NERDCommenterComment',    '<leader>cc')
-    call s:CreateMaps('<plug>NERDCommenterToggle',     '<leader>/')
+    call s:CreateMaps('<plug>NERDCommenterToggle',     '<leader>c<space>')
     call s:CreateMaps('<plug>NERDCommenterMinimal',    '<leader>cm')
     call s:CreateMaps('<plug>NERDCommenterSexy',       '<leader>cs')
     call s:CreateMaps('<plug>NERDCommenterInvert',     '<leader>ci')
