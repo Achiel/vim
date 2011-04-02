@@ -64,5 +64,3 @@ nnoremap <leader>t :BufExplorer<CR>
 nnoremap <leader>. :Ve .<CR><CR>
 nnoremap <leader>> :Se.<CR>
 
-" gundo:
-nnoremap <leader>g :GundoToggle<CR>
