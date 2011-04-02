@@ -65,4 +65,8 @@ nnoremap <leader>. :Ve .<CR><CR>
 nnoremap <leader>> :Se.<CR>
 
 " taglist
-nnoremap <leader>g :TlistToggle<CR>
+nnoremap <leader>l :TlistToggle<CR>
+
+:set hidden
+:set undofile
+:set undodir=/home/achiel/.vimundo/
