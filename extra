@@ -70,3 +70,9 @@ nnoremap <leader>l :TlistToggle<CR>
 :set hidden
 :set undofile
 :set undodir=/home/achiel/.vimundo/
+
+" folding
+nnoremap f za
+nnoremap F zR
+nnoremap <C-j> zj
+nnoremap <C-k> zk
