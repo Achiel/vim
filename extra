@@ -76,8 +76,9 @@ nnoremap <leader>l :TlistToggle<CR>
 " folding
 nnoremap f za
 nnoremap F zR
-nnoremap <C-J> zj
-nnoremap <C-K> zk
+map a ggVG
+nnoremap j zj
+nnoremap k zk
 
 " pdb stuff
 python << EOF
