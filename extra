@@ -26,13 +26,15 @@ let mapleader = ","
 vmap r "_dP
 inoremap jj <ESC>
 :cmap W w
-:cmap Q q 
-:nnoremap <C-q> :q<CR>
+:cmap Q q
+nnoremap <C-x> :q<CR>
 :set number
-map <buffer> <S-e> :w<CR>:!/usr/bin/env python2 % <CR>
 nnoremap + maO<esc>`a
 nnoremap _ mao<esc>`a
 map <F2> <Esc>:1,$!xmllint --format -<CR>
+
+map <leader>e :Errors<CR>
+map <leader>E :Errors<CR><C-w>j:q<CR>
 
 " window splitting:
 nnoremap <leader>h <C-w>v<C-w>l
@@ -74,8 +76,9 @@ nnoremap <leader>l :TlistToggle<CR>
 " folding
 nnoremap f za
 nnoremap F zR
-nnoremap <C-J> zj
-nnoremap <C-K> zk
+map a ggVG
+nnoremap j zj
+nnoremap k zk
 
 " folding js
 function! JavaScriptFold() 
