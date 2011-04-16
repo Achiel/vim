@@ -69,9 +69,11 @@ nnoremap <leader>> :Se.<CR>
 " taglist
 nnoremap <leader>l :TlistToggle<CR>
 
-:set hidden
-:set undofile
-:set undodir=/home/achiel/.vimundo/
+if has('unix')
+    :set hidden
+    :set undofile
+    :set undodir=/home/achiel/.vimundo/
+endif
 
 " folding
 nnoremap f za
@@ -93,3 +95,6 @@ function! JavaScriptFold()
 endfunction
 au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
+
+" yankring
+map <leader>y :YRShow<CR>
