@@ -70,9 +70,11 @@ nnoremap <leader>> :Se.<CR>
 nnoremap <leader>l :TlistToggle<CR>
 
 if has('unix')
-    :set hidden
-    :set undofile
-    :set undodir=/home/achiel/.vimundo/
+    if system("uname") != "Darwin\n"
+        :set hidden
+        :set undofile
+        :set undodir=/home/achiel/.vimundo/
+    endif
 endif
 
 " folding
