@@ -62,8 +62,11 @@ set statusline+=%<%P                         " file position
 " buffer quickview
 nnoremap <leader>t :BufExplorer<CR>
 
+" complete paths on tab
+set wildmode=list:longest,full
+
 " netrw stuff:
-nnoremap <leader>. :Ve .<CR><CR>
+nnoremap <leader>. :e .<CR><CR>
 nnoremap <leader>> :Se.<CR>
 
 " taglist
