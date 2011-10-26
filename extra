@@ -72,14 +72,6 @@ nnoremap <leader>> :Se.<CR>
 " taglist
 nnoremap <leader>l :TlistToggle<CR>
 
-if has('unix')
-    if system("uname") != "Darwin\n"
-        :set hidden
-        :set undofile
-        :set undodir=/home/achiel/.vimundo/
-    endif
-endif
-
 " folding
 nnoremap f za
 nnoremap F zR
