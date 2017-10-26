@@ -24,7 +24,6 @@ nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 let mapleader = ","
 vmap r "_dP
-inoremap jj <ESC>
 :cmap W w
 :cmap Q q
 nnoremap <C-x> :q<CR>
@@ -67,6 +66,7 @@ set wildmode=list:longest,full
 
 " netrw stuff:
 nnoremap <leader>. :e .<CR><CR>
+nnoremap ; :e .<CR><CR>
 nnoremap <leader>> :Se.<CR>
 
 " taglist
@@ -95,3 +95,9 @@ au FileType javascript setl fen
 
 " yankring
 map <leader>y :YRShow<CR>
+
+" json folding crap:
+syntax on
+set fdm=syntax
+
+set rtp+=/usr/local/opt/fzf
