@@ -102,3 +102,4 @@ set fdm=syntax
 
 set rtp+=/usr/local/opt/fzf
 " nnoremap S diw"0P <- proper paste, need new key
+set backspace=indent,eol,start
